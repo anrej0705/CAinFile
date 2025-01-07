@@ -39,14 +39,14 @@ int main()
 struct ain_header
 {
     int ainet_ver;  //Версия файла(37 для GMOD)
-    int map_ver;    //Версия карты(1765 для GMOD)
+    int map_ver;    //Версия карты(17 для GMOD)
 };
 ```
 
 |Поле|Размер|Тип|Описание|
 |--|--|--|--|
 |ainet_ver|4 байта|int32_t|Версия файла(37 для GMOD)|
-|map_ver|4 байта|int32_t|Версия карты(1765 для GMOD)|
+|map_ver|4 байта|int32_t|Версия карты(17 для GMOD)|
 
 ***
 
