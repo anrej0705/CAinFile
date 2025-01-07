@@ -9,6 +9,8 @@ int main()
 {
     CAinFileDecoder ain("gm_construct.ain");  //Вся работа с AIN осуществляется в процессе создания объекта
 
+    //output -> gm_construct(excel 97).ain.xls
+
     //Подведение итогов:
     std::vector<ain_node> n_list(*ain.node_list);
     std::vector<ain_link> l_list(*ain.link_list);
