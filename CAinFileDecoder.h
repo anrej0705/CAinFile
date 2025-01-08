@@ -86,19 +86,19 @@ PACKED_DATA(struct ain_link     //Размер 40 байт
 class CAinFileDecoder
 {
     private:
-        std::ifstream* ain;
-        ain_header* ain_hed;
-        ain_node* node;
-        ain_link* link;
-        int lut_int;
+        std::ifstream* ain = NULL;
+        ain_header* ain_hed = NULL;
+        ain_node* node = NULL;
+        ain_link* link = NULL;
+        int lut_int = 0;
     public:
-        std::vector<ain_node> *node_list;   //Таблица узлов
-        std::vector<ain_link> *link_list;   //Таблица межузловых соединений
-        std::vector<int>* lut;              //Таблица, содержащая все номера узлов, которые есть в текущем файле
+        std::vector<ain_node> *node_list = NULL;   //Таблица узлов
+        std::vector<ain_link> *link_list = NULL;   //Таблица межузловых соединений
+        std::vector<int>* lut = NULL;              //Таблица, содержащая все номера узлов, которые есть в текущем файле
     public:
         //Имя карты нужно передать полностью, вместе с путём, пример
         //CAinFileDecoder("C:\git\rubyrose_ai_test.AIN");
-        CAinFileDecoder(const char* file)  //MSVC C26495 - игнорить, всё работает
+        CAinFileDecoder(const char* file)
         {
             //Если вызов пустой - выходим
             if (!file)
